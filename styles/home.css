@@ -1,1 +1,13 @@
-/* No CSS *//*# sourceMappingURL=home.css.map */
+#colorContainer {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 50px;
+  -ms-grid-columns: 50vw 50vw;
+      grid-template-columns: 50vw 50vw;
+}
+
+#colorContainer div {
+  width: 150px;
+  height: 150px;
+}
+/*# sourceMappingURL=home.css.map */

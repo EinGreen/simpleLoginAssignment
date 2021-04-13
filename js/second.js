@@ -4,13 +4,22 @@ let noLogin = document.getElementById("noLoginContainer");
 let showMain = document.getElementById("showMain");
 
 function colorSuccess(res) {
-    let colorData = res.data;
+    let colorData = res.data.data;
+    console.log(colorData);
     // Note: "color" looks like a weird word to me... 
+    let container = document.getElementById("colorContainer");
     for(let i=0; i<colorData.length; i++) {
         let daColor = colorData[i].color;
         let colorName = colorData[i].name;
-        let colorYear = colorData[i].color;
-        
+        let colorYear = colorData[i].year;
+        let colorId = colorData[i].id;
+
+        container.innerHTML += `<div>
+        <p>${colorName} ${colorYear}</p>
+        <div id="displayColor${colorId}">${colorName}</div>
+        </div>`;
+        let displayColor = document.getElementById(`displayColor${colorId}`);
+        displayColor.style.background = `${daColor}`;
     }
 }
 function colorFailure(err) {
@@ -42,3 +51,4 @@ if (loginSession) {
     console.log("wtf");
     // yes, I made this because something else might happen
 }
+
