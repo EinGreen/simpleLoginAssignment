@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>This Thing</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    
+    <header>
+        <h1>Because This needed a Title</h1>
+    </header>
+
+    <div id="noteToUser">
+        <!-- this is mostly a note to myself when I look that this later -->
+        <p>This is just a test, you can't actually create more make a Login. Use the Info bellow to test:</p>
+        <p>Email: eve.holt@reqres.in</p>
+        <p>Password: Doesn't matter</p>
+    </div>
+
+    <form action="javascript:void(0)" id="loginForm">
+        <p>Email:</p>
+        <input type="text" id="emailInput">
+        <p>Password:</p>
+        <input type="password" id="passwordInput">
+        <input type="submit" value="Login" id="loginButton">
+        <p id="loginMessage"></p>
+    </form>
     
     <script src='https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js'></script>
