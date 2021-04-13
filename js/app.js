@@ -10,12 +10,12 @@ function loginFailure(err) {
 function loginSuccess(res) {
     // Cookie
     let tokenData = res.data.token;
-    Cookies.set("log_seesion_id", tokenData);
+    Cookies.set("log_session_id", tokenData);
     // Message
     let successMessage = document.getElementById("loginMessage");
     successMessage.innerText = "Success! Welcome";
     // Go to Other page
-    setTimeout(changePage, 2000);
+    setTimeout(changePage, 1800);
 }
 function loginUser(eventDetails) {
     document.getElementById("loginMessage").innerText = "Loading...";
